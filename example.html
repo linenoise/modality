@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				var typealert = function(object) { alert('this is a ' + typeof(object) + ' that looks like ' + object); }
+				var notifier = function(message) { alert("notifier: you pressed " + message); }
+				var callbacker = function(message) { alert("callbacker: you pressed " + message); }
+
+				Modality.show_dialog({
+					title     : 'Your modal window generator is talking to you',
+					content   : '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, ' + 
+								'sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna ' + 
+								'aliquam erat volutpat.</p>' + 
+								'<p>Should precautionary measures be taken?</p>',
+					responses : ['Yes', 'No'],
+					notify    : notifier,
+					callbacks : {
+						'Yes' : callbacker,
+						'No'  : callbacker,
+					}
+				});	
+			});
+		</script>
+
+		<a class="test_point" href="#">testing here</a>
+		<div class="tester" style="display:none; border: 1px solid black; background-color: blue; padding: 1em; margin: 1em;">
+			Success!
+		</div>
+
+		<script type="text/javascript">
+			$('.test_point').click(function(event){
+				event.preventDefault();
+				$(".tester").show();
+			});
+		</script>
+	</body>
+</html>
