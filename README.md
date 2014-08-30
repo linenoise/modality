@@ -61,8 +61,8 @@ Opening a notice with custom presentation
 License
 -------
 
-		Copyright (c) 2009 Dann Stayskal
-		http://dann.stayskal.com/software
+		Copyright (c) 2009 Danne Stayskal
+		http://danne.stayskal.com/software
 
 		This program is free software: you can redistribute it and/or modify
 		it under the terms of the GNU General Public License as published by
